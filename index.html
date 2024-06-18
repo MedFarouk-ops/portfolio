@@ -5,17 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Farouk Khabir - Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
         .header, .section-title {
             text-align: center;
             margin: 20px 0;
+            color: #007bff; /* Blue accent color */
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
         .contact-info {
             text-align: center;
@@ -29,31 +40,40 @@
             margin: 5px 0;
             color: #007bff;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        .project-links a:hover {
+            color: #0056b3;
+        }
+        .icon {
+            font-size: 24px;
+            margin-right: 8px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <header class="header">
-            <h1>Mohamed Farouk KHABIR</h1>
-            <h2>Ingénieur Développement Logiciel</h2>
+            <h1 style="color: #343a40;">Mohamed Farouk KHABIR</h1>
+            <h2 style="color: #6c757d;">Ingénieur Développement Logiciel</h2>
         </header>
 
         <div class="contact-info">
-            <p><strong>Location:</strong> Tataouine, Tunisia</p>
-            <p><strong>Phone:</strong> +216 55706653</p>
-            <p><strong>Email:</strong> <a href="mailto:mohamed.farouk.khabir@gmail.com">mohamed.farouk.khabir@gmail.com</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/medfarouk-ops">github.com/medfarouk-ops</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohamed-farouk-khabir-48979328a/">linkedin.com/in/mohamedfarouk</a></p>
+            <p><i class="fas fa-map-marker-alt icon"></i> Tataouine, Tunisia</p>
+            <p><i class="fas fa-phone-alt icon"></i> <a href="tel:+21655706653">+216 55706653</a></p>
+            <p><i class="fas fa-envelope icon"></i> <a href="mailto:mohamed.farouk.khabir@gmail.com">mohamed.farouk.khabir@gmail.com</a></p>
+            <p><i class="fab fa-github icon"></i> <a href="https://github.com/medfarouk-ops" target="_blank">github.com/medfarouk-ops</a></p>
+            <p><i class="fab fa-linkedin icon"></i> <a href="https://www.linkedin.com/in/mohamed-farouk-khabir-48979328a/" target="_blank">linkedin.com/in/mohamedfarouk</a></p>
         </div>
 
-        <section>
+        <section data-aos="fade-right">
             <h3 class="section-title">Profil Professionnel</h3>
             <p>Ingénieur informatique passionné par l'innovation et le développement logiciel avec une expérience avérée en développement C#/.NET et en tests logiciels. Actuellement Développeur C#/.NET chez EMWORKS Tunisie.</p>
         </section>
 
-        <section>
+
+        <section data-aos="fade-left">
             <h3 class="section-title">Expériences Professionnelles</h3>
             <ul>
                 <li>
@@ -70,7 +90,7 @@
             </ul>
         </section>
 
-        <section>
+        <section data-aos="fade-right">
             <h3 class="section-title">Éducation</h3>
             <ul>
                 <li>
@@ -87,7 +107,7 @@
             </ul>
         </section>
 
-        <section>
+        <section data-aos="fade-left">
             <h3 class="section-title">Projets Académiques et Personnels</h3>
             <ul>
                 <li>
@@ -123,7 +143,7 @@
             </ul>
         </section>
 
-        <section>
+        <section data-aos="fade-right">
             <h3 class="section-title">Compétences</h3>
             <ul>
                 <li>Langages de programmation: Java, C, C++, C#, Python, PHP, JavaScript, TypeScript</li>
@@ -135,7 +155,7 @@
             </ul>
         </section>
 
-        <section>
+        <section data-aos="fade-left">
             <h3 class="section-title">Certifications</h3>
             <ul>
                 <li>Foundational C# with Microsoft Certification - FreeCodeCamp & Microsoft | Mai 2024</li>
@@ -144,7 +164,7 @@
             </ul>
         </section>
 
-        <section>
+        <section data-aos="fade-right">
             <h3 class="section-title">Langues</h3>
             <ul>
                 <li>Arabe: langue maternelle</li>
@@ -153,7 +173,7 @@
             </ul>
         </section>
 
-        <section>
+        <section data-aos="fade-left">
             <h3 class="section-title">Divers</h3>
             <ul>
                 <li>Permis de conduire B</li>
@@ -163,5 +183,13 @@
         </section>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
 </body>
 </html>
