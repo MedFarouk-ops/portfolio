@@ -10,17 +10,21 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: #f0f0f0;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
             color: #333;
             margin: 0;
             padding: 0;
+            overflow: hidden; /* Prevents scrollbars from appearing */
+            position: relative; /* Necessary for positioning the gradient overlay */
         }
+
         .header, .section-title {
             text-align: center;
             margin: 20px 0;
             color: #007bff;
             font-weight: bold;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -28,24 +32,31 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1; /* Ensures the container is above the gradient */
         }
+
         .contact-info {
             text-align: center;
             margin: 20px 0;
         }
+
         .contact-info p {
             margin: 5px 0;
         }
+
         .icon {
             font-size: 24px;
             margin-right: 8px;
             color: #007bff;
         }
+
         .section-title {
             position: relative;
             display: inline-block;
             padding-bottom: 10px;
         }
+
         .section-title:after {
             content: '';
             display: block;
@@ -54,14 +65,26 @@
             background: #007bff;
             margin: 10px auto 0;
         }
+
         #language-selector {
             position: absolute;
             top: 20px;
             right: 20px;
         }
+
+        #gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: background 0.5s ease;
+        }
     </style>
 </head>
 <body>
+    <div id="gradient"></div>
     <div id="language-selector" class="p-3">
         <select id="languageDropdown" class="form-select">
             <option value="en">English</option>
@@ -86,13 +109,8 @@
                 xobj.overrideMimeType("application/json");
                 xobj.open('GET', `${language}.json`, true);
                 xobj.onreadystatechange = function () {
-                    if (xobj.readyState == 4) {
-                        if (xobj.status == 200) {
-                            console.log("JSON data fetched successfully for language:", language);
-                            callback(JSON.parse(xobj.responseText));
-                        } else {
-                            console.error("Failed to fetch JSON data for language:", language);
-                        }
+                    if (xobj.readyState == 4 && xobj.status == 200) {
+                        callback(JSON.parse(xobj.responseText));
                     }
                 };
                 xobj.send(null);
@@ -190,7 +208,8 @@
                             <ul>
                                 ${data.sections.languages.languages_list.map(lang => `
                                     <li>
-                                        <h4><i class="fas fa-language icon"></i> ${lang.language}</h4>
+                                        <h4><i class="fas fa-language icon"></i> ${lang.language}</
+                                        </h4>
                                         <p>${lang.proficiency}</p>
                                     </li>
                                 `).join('')}
@@ -217,6 +236,14 @@
                 duration: 1200,
                 easing: 'ease-in-out-back',
                 once: true
+            });
+
+            // Add mousemove event for interactive gradient background
+            document.addEventListener('mousemove', function(event) {
+                var x = event.clientX / window.innerWidth;
+                var y = event.clientY / window.innerHeight;
+                var gradientElement = document.getElementById('gradient');
+                gradientElement.style.background = `linear-gradient(${x * 360}deg, #ff7e5f, #feb47b, #ff7e5f)`;
             });
         });
     </script>
