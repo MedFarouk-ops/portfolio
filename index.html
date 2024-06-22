@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background: #f0f0f0;
             color: #333;
             margin: 0;
@@ -19,6 +19,7 @@
             text-align: center;
             margin: 20px 0;
             color: #007bff;
+            font-weight: bold;
         }
         .container {
             max-width: 900px;
@@ -38,6 +39,20 @@
         .icon {
             font-size: 24px;
             margin-right: 8px;
+            color: #007bff;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #007bff;
+            margin: 10px auto 0;
         }
         #language-selector {
             position: absolute;
@@ -110,8 +125,8 @@
                             <ul>
                                 ${data.sections.professional_experience.experiences.map(exp => `
                                     <li>
-                                        <h4>${exp.title}</h4>
-                                        <p>${exp.company}, ${exp.location} | ${exp.date}</p>
+                                        <h4><i class="fas fa-briefcase icon"></i> ${exp.title}</h4>
+                                        <p><i class="fas fa-building icon"></i> ${exp.company}, <i class="fas fa-map-marker-alt icon"></i> ${exp.location} | <i class="fas fa-calendar-alt icon"></i> ${exp.date}</p>
                                         <ul>
                                             ${exp.details.map(detail => `<li>${detail}</li>`).join('')}
                                         </ul>
@@ -125,8 +140,8 @@
                             <ul>
                                 ${data.sections.education.schools.map(school => `
                                     <li>
-                                        <h4>${school.degree}</h4>
-                                        <p>${school.institution}, ${school.location} | ${school.date}</p>
+                                        <h4><i class="fas fa-graduation-cap icon"></i> ${school.degree}</h4>
+                                        <p><i class="fas fa-university icon"></i> ${school.institution}, <i class="fas fa-map-marker-alt icon"></i> ${school.location} | <i class="fas fa-calendar-alt icon"></i> ${school.date}</p>
                                     </li>
                                 `).join('')}
                             </ul>
@@ -137,7 +152,7 @@
                             <ul>
                                 ${data.sections.projects.projects.map(project => `
                                     <li>
-                                        <h4>${project.name}</h4>
+                                        <h4><i class="fas fa-project-diagram icon"></i> ${project.name}</h4>
                                         <p>${project.description}</p>
                                         <p><strong>Technologies:</strong> ${project.technologies.join(', ')}</p>
                                         <p><a href="${project.link}" class="project-link" target="_blank">${project.link}</a></p>
@@ -151,7 +166,7 @@
                             <ul>
                                 ${data.sections.skills.skills_list.map(skill => `
                                     <li>
-                                        <h4>${skill.category}</h4>
+                                        <h4><i class="fas fa-laptop-code icon"></i> ${skill.category}</h4>
                                         <p>${skill.skills.join(', ')}</p>
                                     </li>
                                 `).join('')}
@@ -163,7 +178,7 @@
                             <ul>
                                 ${data.sections.certifications.certifications_list.map(cert => `
                                     <li>
-                                        <h4>${cert.name}</h4>
+                                        <h4><i class="fas fa-certificate icon"></i> ${cert.name}</h4>
                                         <p>${cert.date} | ${cert.issuer}, ${cert.location}</p>
                                     </li>
                                 `).join('')}
@@ -175,7 +190,7 @@
                             <ul>
                                 ${data.sections.languages.languages_list.map(lang => `
                                     <li>
-                                        <h4>${lang.language}</h4>
+                                        <h4><i class="fas fa-language icon"></i> ${lang.language}</h4>
                                         <p>${lang.proficiency}</p>
                                     </li>
                                 `).join('')}
@@ -185,13 +200,11 @@
                 `;
             }
 
-            // Load JSON data and populate content
             loadJSON(function(response) {
                 console.log("Populating content with JSON data", response);
                 populateContent(response);
             });
 
-            // Change language event listener
             document.getElementById('languageDropdown').addEventListener('change', function() {
                 var selectedLanguage = this.value;
                 console.log(`Language changed to: ${selectedLanguage}`);
@@ -200,9 +213,10 @@
                 }, selectedLanguage);
             });
 
-            // Initialize AOS library
             AOS.init({
                 duration: 1200,
+                easing: 'ease-in-out-back',
+                once: true
             });
         });
     </script>
