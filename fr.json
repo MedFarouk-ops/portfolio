@@ -1,0 +1,45 @@
+{
+    "header": {
+        "name": "Mohamed Farouk KHABIR",
+        "title": "Ingénieur Développement Logiciel"
+    },
+    "contact": {
+        "location": "Tataouine, Tunisie",
+        "phone": "+216 55706653",
+        "email": "mohamed.farouk.khabir@gmail.com",
+        "github": "github.com/medfarouk-ops",
+        "linkedin": "linkedin.com/in/mohamedfarouk"
+    },
+    "sections": {
+        "professional_profile": {
+            "title": "Profil Professionnel",
+            "content": "Ingénieur informatique passionné par l'innovation et le développement logiciel avec une expérience avérée en développement C#/.NET et en tests logiciels. Actuellement Développeur C#/.NET chez EMWORKS Tunisie."
+        },
+        "professional_experience": {
+            "title": "Expériences Professionnelles",
+            "experiences": [
+                {
+                    "title": "Ingénieur Développement Logiciels (C#/.NET)",
+                    "company": "EMWORKS Tunisie",
+                    "location": "Tunis, Tunisie",
+                    "date": "Depuis avril 2024",
+                    "details": [
+                        "Collaboré avec l'équipe de développement pour maintenir et améliorer le logiciel EMWorks Studio, en utilisant les technologies C#, C++ et .NET Framework.",
+                        "Implémenté de nouvelles fonctionnalités et corrigé des bogues pour optimiser les performances de l'application."
+                    ]
+                },
+                {
+                    "title": "Ingénieur Test et Validation (QA)",
+                    "company": "EMWORKS Tunisie",
+                    "location": "Tunis, Tunisie",
+                    "date": "De juillet 2022 à octobre 2023",
+                    "details": [
+                        "Création, exécution et amélioration de plans de test pour assurer une couverture complète et le respect des normes de qualité.",
+                        "Analyse minutieuse des exigences, identification des scénarios de test et rédaction de cas de test précis.",
+                        "Collaboration étroite avec les équipes de développement, réalisation de tests ad hoc et contribution à la documentation."
+                    ]
+                }
+            ]
+        }
+    }
+}

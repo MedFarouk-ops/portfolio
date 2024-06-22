@@ -1,0 +1,45 @@
+{
+    "header": {
+        "name": "Mohamed Farouk KHABIR",
+        "title": "Software Development Engineer"
+    },
+    "contact": {
+        "location": "Tataouine, Tunisia",
+        "phone": "+216 55706653",
+        "email": "mohamed.farouk.khabir@gmail.com",
+        "github": "github.com/medfarouk-ops",
+        "linkedin": "linkedin.com/in/mohamedfarouk"
+    },
+    "sections": {
+        "professional_profile": {
+            "title": "Professional Profile",
+            "content": "Software engineer passionate about innovation and software development with proven experience in C#/.NET development and software testing. Currently a C#/.NET Developer at EMWORKS Tunisia."
+        },
+        "professional_experience": {
+            "title": "Professional Experience",
+            "experiences": [
+                {
+                    "title": "Software Development Engineer (C#/.NET)",
+                    "company": "EMWORKS Tunisia",
+                    "location": "Tunis, Tunisia",
+                    "date": "Since April 2024",
+                    "details": [
+                        "Collaborated with the development team to maintain and improve the EMWorks Studio software, using C#, C++ and .NET Framework technologies.",
+                        "Implemented new features and fixed bugs to optimize application performance."
+                    ]
+                },
+                {
+                    "title": "Test and Validation Engineer (QA)",
+                    "company": "EMWORKS Tunisia",
+                    "location": "Tunis, Tunisia",
+                    "date": "July 2022 to October 2023",
+                    "details": [
+                        "Created, executed and improved test plans to ensure complete coverage and compliance with quality standards.",
+                        "Thoroughly analyzed requirements, identified test scenarios and wrote precise test cases.",
+                        "Closely collaborated with development teams, performed ad-hoc testing and contributed to documentation."
+                    ]
+                }
+            ]
+        }
+    }
+}

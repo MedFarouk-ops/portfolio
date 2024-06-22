@@ -1,0 +1,45 @@
+{
+    "header": {
+        "name": "Mohamed Farouk KHABIR",
+        "title": "Softwareentwicklungsingenieur"
+    },
+    "contact": {
+        "location": "Tataouine, Tunesien",
+        "phone": "+216 55706653",
+        "email": "mohamed.farouk.khabir@gmail.com",
+        "github": "github.com/medfarouk-ops",
+        "linkedin": "linkedin.com/in/mohamedfarouk"
+    },
+    "sections": {
+        "professional_profile": {
+            "title": "Berufsprofil",
+            "content": "Informatikingenieur, der sich für Innovation und Softwareentwicklung begeistert und über nachgewiesene Erfahrung in der C#/.NET-Entwicklung und Softwaretests verfügt. Derzeit C#/.NET-Entwickler bei EMWORKS Tunesien."
+        },
+        "professional_experience": {
+            "title": "Berufserfahrung",
+            "experiences": [
+                {
+                    "title": "Softwareentwicklungsingenieur (C#/.NET)",
+                    "company": "EMWORKS Tunesien",
+                    "location": "Tunis, Tunesien",
+                    "date": "Seit April 2024",
+                    "details": [
+                        "Mit dem Entwicklungsteam zusammengearbeitet, um die EMWorks Studio-Software zu warten und zu verbessern, unter Verwendung von C#, C++ und .NET Framework-Technologien.",
+                        "Neue Funktionen implementiert und Fehler behoben, um die Leistung der Anwendung zu optimieren."
+                    ]
+                },
+                {
+                    "title": "Test- und Validierungsingenieur (QA)",
+                    "company": "EMWORKS Tunesien",
+                    "location": "Tunis, Tunesien",
+                    "date": "Juli 2022 bis Oktober 2023",
+                    "details": [
+                        "Erstellung, Ausführung und Verbesserung von Testplänen, um eine vollständige Abdeckung und Einhaltung der Qualitätsstandards zu gewährleisten.",
+                        "Gründliche Analyse der Anforderungen, Identifizierung von Testszenarien und präzises Schreiben von Testfällen.",
+                        "Enge Zusammenarbeit mit den Entwicklungsteams, Durchführung von Ad-hoc-Tests und Beitrag zur Dokumentation."
+                    ]
+                }
+            ]
+        }
+    }
+}
