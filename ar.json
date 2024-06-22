@@ -62,33 +62,33 @@
             "title": "المشاريع الأكاديمية والشخصية",
             "projects": [
                 {
-                    "name": "Fullstack Community Automobile Application",
-                    "description": "Developed and launched a comprehensive community application using ReactJS and Firebase.",
+                    "name": "تطبيق مجتمع السيارات المتكامل",
+                    "description": "تم تطوير وإطلاق تطبيق مجتمع شامل باستخدام ReactJS و Firebase.",
                     "technologies": ["ReactJS", "Firebase", "Google Analytics", "JavaScript", "Github"],
                     "link": "https://vw-cc-community.vercel.app"
                 },
                 {
-                    "name": "Smart-Hospital: Fullstack Mobile Application",
-                    "description": "Design and development of a web/mobile platform for managing various hospital/clinic services.",
+                    "name": "المستشفى الذكي: تطبيق متكامل للهواتف المحمولة",
+                    "description": "تصميم وتطوير منصة ويب/محمولة لإدارة خدمات المستشفيات/العيادات المختلفة.",
                     "technologies": ["Flutter", "Django REST Framework", "MongoDB", "API"],
                     "link": "https://github.com/MedFarouk-ops/HospitalManagementSystem"
                 },
                 {
-                    "name": "Research Laboratory Management System",
-                    "description": "Designed a web application for managing a research laboratory using Spring Boot and Angular, allowing simplified management of members, publications, and events.",
+                    "name": "نظام إدارة مختبر الأبحاث",
+                    "description": "تم تصميم تطبيق ويب لإدارة مختبر أبحاث باستخدام Spring Boot و Angular، مما يسمح بإدارة مبسطة للأعضاء والمنشورات والفعاليات.",
                     "technologies": ["Spring Boot", "Angular", "Java", "RESTful API", "TypeScript", "MySQL"],
                     "link": "https://github.com/MedFarouk-ops/ResearchLabManagementSystem"
                 },
                 {
-                    "name": "Digital Library Management Platform",
-                    "description": "Web application for managing book borrowing for a library.",
+                    "name": "منصة إدارة المكتبة الرقمية",
+                    "description": "تطبيق ويب لإدارة استعارة الكتب للمكتبة.",
                     "technologies": ["Symfony 7", "PHP", "Bootstrap", "HTML", "CSS", "MySQL"],
                     "link": "https://github.com/MedFarouk-ops/SymfonyLibraryBookingSystem"
                 },
                 {
-                    "name": "Online Training Management Web Platform",
-                    "description": "Design and development of a web application for managing online training for EMWORKS TUNISIA.",
-                    "technologies": ["Laravel 5.8", "PHP", "HTML", "Bootstrap", "Css", "Js", "MySQl"],
+                    "name": "منصة إدارة التدريب عبر الإنترنت",
+                    "description": "تصميم وتطوير تطبيق ويب لإدارة التدريب عبر الإنترنت لشركة EMWORKS تونس.",
+                    "technologies": ["Laravel 5.8", "PHP", "HTML", "Bootstrap", "CSS", "JS", "MySQL"],
                     "link": "https://github.com/MedFarouk-ops/TrainingManagementSystem"
                 }
             ]
