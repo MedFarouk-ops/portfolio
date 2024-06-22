@@ -40,6 +40,127 @@
                     ]
                 }
             ]
+        },
+        "education": {
+            "title": "Éducation",
+            "schools": [
+                {
+                    "degree": "Diplôme National D'Ingénieur En Informatique",
+                    "institution": "École Nationale d'Ingénieurs de Sfax",
+                    "location": "Sfax, Tunisie",
+                    "date": "De 2019 à 2022"
+                },
+                {
+                    "degree": "Cycle préparatoire physique technique",
+                    "institution": "Institut préparatoire aux études d'ingénieurs d'El Manar (IPEIEM)",
+                    "location": "Tunis",
+                    "date": "De 2017 à 2019"
+                }
+            ]
+        },
+        "projects": {
+            "title": "Projets Académiques et Personnels",
+            "projects": [
+                {
+                    "name": "Application Fullstack de communauté automobile",
+                    "description": "Développé et lancé une application communautaire complète utilisant ReactJS et Firebase.",
+                    "technologies": ["ReactJS", "Firebase", "Google Analytics", "JavaScript", "Github"],
+                    "link": "https://vw-cc-community.vercel.app"
+                },
+                {
+                    "name": "Smart-Hospital: Application Mobile Fullstack",
+                    "description": "Conception et développement d'une plateforme web/mobile de gestion divers services de l'hôpital/clinique.",
+                    "technologies": ["Flutter", "Django REST Framework", "MongoDB", "API"],
+                    "link": "https://github.com/MedFarouk-ops/HospitalManagementSystem"
+                },
+                {
+                    "name": "Système de gestion de laboratoire de recherche",
+                    "description": "Conçu une application web de gestion de laboratoire de recherche avec Spring Boot et Angular, permettant une gestion simplifiée des membres, des publications et des événements.",
+                    "technologies": ["Spring Boot", "Angular", "Java", "API RESTful", "TypeScript", "MySQL"],
+                    "link": "https://github.com/MedFarouk-ops/ResearchLabManagementSystem"
+                },
+                {
+                    "name": "Plateforme web de gestion de bibliothèque numérique",
+                    "description": "Application web de gestion d'emprunt de livres pour une bibliothèque.",
+                    "technologies": ["Symfony 7", "PHP", "Bootstrap", "HTML", "CSS", "MySQL"],
+                    "link": "https://github.com/MedFarouk-ops/SymfonyLibraryBookingSystem"
+                },
+                {
+                    "name": "Plateforme Web de Gestion de Formation en Ligne",
+                    "description": "Conception et développement d’une application web de gestion de formations en ligne pour la société EMWORKS TUNISIE.",
+                    "technologies": ["Laravel 5.8", "PHP", "HTML", "Bootstrap", "Css", "Js", "MySQl"],
+                    "link": "https://github.com/MedFarouk-ops/TrainingManagementSystem"
+                }
+            ]
+        },
+        "skills": {
+            "title": "Compétences",
+            "skills_list": [
+                {
+                    "category": "Langages de programmation",
+                    "skills": ["Java", "C", "C++", "C#", "Python", "PHP", "JavaScript", "TypeScript"]
+                },
+                {
+                    "category": "Développement Web",
+                    "skills": ["HTML", "CSS", "Bootstrap", "PHP", "JavaScript", "TypeScript", "React.js", "Angular"]
+                },
+                {
+                    "category": "Frameworks",
+                    "skills": ["Laravel", "Symfony", "Spring Boot", ".NET", "Flutter", "Django REST Framework", "React.js"]
+                },
+                {
+                    "category": "Bases de données",
+                    "skills": ["MySQL", "SQLite", "MongoDB", "Firebase"]
+                },
+                {
+                    "category": "Conception",
+                    "skills": ["UML", "Design Pattern", "MVC model", "Microservices architecture", "APIs"]
+                },
+                {
+                    "category": "Outils et Technologies",
+                    "skills": ["GIT", "GitHub", "Android Studio", "Unity", "Postman", "VS Code", "Linux", "APIs", "WinAppDriver", "TFS", "Scripting", "Azure Devops"]
+                }
+            ]
+        },
+        "certifications": {
+            "title": "Certifications",
+            "certifications_list": [
+                {
+                    "name": "Foundational C# with Microsoft Certification",
+                    "date": "Mai 2024",
+                    "issuer": "FreeCodeCamp & Microsoft",
+                    "location": "en ligne"
+                },
+                {
+                    "name": "JavaScript Algorithms and Data Structures",
+                    "date": "Août 2023",
+                    "issuer": "FreeCodeCamp",
+                    "location": "en ligne"
+                },
+                {
+                    "name": "SCRUM Fundamentals Certified (SFC)",
+                    "date": "Novembre 2021",
+                    "issuer": "SCRUMStudy",
+                    "location": "en ligne"
+                }
+            ]
+        },
+        "languages": {
+            "title": "Langues",
+            "languages_list": [
+                {
+                    "language": "Arabe",
+                    "proficiency": "langue maternelle"
+                },
+                {
+                    "language": "Anglais",
+                    "proficiency": "niveau intermédiaire"
+                },
+                {
+                    "language": "Français",
+                    "proficiency": "niveau intermédiaire"
+                }
+            ]
         }
     }
 }
