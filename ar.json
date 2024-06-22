@@ -45,17 +45,18 @@
             "title": "التعليم",
             "schools": [
                 {
-                    "degree": "Diplôme National D'Ingénieur En Informatique",
-                    "institution": "École Nationale d'Ingénieurs de Sfax",
-                    "location": "Sfax, تونس",
+                    "degree": "دبلوم وطني في الهندسة المعلوماتية",
+                    "institution": "المدرسة الوطنية للمهندسين بصفاقس",
+                    "location": "صفاقس، تونس",
                     "date": "من 2019 إلى 2022"
                 },
                 {
-                    "degree": "Cycle préparatoire physique technique",
-                    "institution": "Institut préparatoire aux études d'ingénieurs d'El Manar (IPEIEM)",
+                    "degree": "الدورة التحضيرية في الفيزياء التقنية",
+                    "institution": "المعهد التحضيري للدراسات الهندسية بالمنار (IPEIEM)",
                     "location": "تونس",
                     "date": "من 2017 إلى 2019"
                 }
+                
             ]
         },
         "projects": {
