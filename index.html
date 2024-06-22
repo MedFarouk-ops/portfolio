@@ -14,8 +14,6 @@
             color: #333;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevents scrollbars from appearing */
-            position: relative; /* Necessary for positioning the gradient overlay */
         }
 
         .header, .section-title {
@@ -109,8 +107,13 @@
                 xobj.overrideMimeType("application/json");
                 xobj.open('GET', `${language}.json`, true);
                 xobj.onreadystatechange = function () {
-                    if (xobj.readyState == 4 && xobj.status == 200) {
-                        callback(JSON.parse(xobj.responseText));
+                    if (xobj.readyState == 4) {
+                        if (xobj.status == 200) {
+                            console.log("JSON data fetched successfully for language:", language);
+                            callback(JSON.parse(xobj.responseText));
+                        } else {
+                            console.error("Failed to fetch JSON data for language:", language);
+                        }
                     }
                 };
                 xobj.send(null);
@@ -208,8 +211,7 @@
                             <ul>
                                 ${data.sections.languages.languages_list.map(lang => `
                                     <li>
-                                        <h4><i class="fas fa-language icon"></i> ${lang.language}</
-                                        </h4>
+                                        <h4><i class="fas fa-language icon"></i> ${lang.language}</h4>
                                         <p>${lang.proficiency}</p>
                                     </li>
                                 `).join('')}
@@ -238,8 +240,8 @@
                 once: true
             });
 
-            // Add mousemove event for interactive gradient background
-            document.addEventListener('mousemove', function(event) {
+             // Add mousemove event for interactive gradient background
+             document.addEventListener('mousemove', function(event) {
                 var x = event.clientX / window.innerWidth;
                 var y = event.clientY / window.innerHeight;
                 var gradientElement = document.getElementById('gradient');
