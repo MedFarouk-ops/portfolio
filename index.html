@@ -73,6 +73,13 @@
             right: 20px;
             z-index: 1;
         }
+        [dir="rtl"] .header, [dir="rtl"] .section-title {
+            text-align: right;
+        }
+        [dir="rtl"] .icon {
+            margin-left: 8px;
+            margin-right: 0;
+        }
     </style>
 </head>
 <body>
@@ -102,13 +109,8 @@
                 xobj.overrideMimeType("application/json");
                 xobj.open('GET', `${language}.json`, true);
                 xobj.onreadystatechange = function () {
-                    if (xobj.readyState == 4) {
-                        if (xobj.status == 200) {
-                            console.log("JSON data fetched successfully for language:", language);
-                            callback(JSON.parse(xobj.responseText));
-                        } else {
-                            console.error("Failed to fetch JSON data for language:", language);
-                        }
+                    if (xobj.readyState == 4 && xobj.status == 200) {
+                        callback(JSON.parse(xobj.responseText));
                     }
                 };
                 xobj.send(null);
@@ -117,7 +119,7 @@
             function populateContent(data) {
                 var cvContainer = document.getElementById('cv-container');
                 cvContainer.innerHTML = `
-                    <div class="container" data-aos="fade-up">
+                    <div data-aos="fade-up">
                         <header class="header">
                             <h1 style="color: #343a40;">${data.header.name}</h1>
                             <h2 style="color: #6c757d;">${data.header.title}</h2>
@@ -214,35 +216,38 @@
                         </section>
                     </div>
                 `;
+
+                // Apply RTL direction if Arabic is selected
+                if (document.getElementById('languageDropdown').value === 'ar') {
+                    document.body.setAttribute('dir', 'rtl');
+                } else {
+                    document.body.removeAttribute('dir');
+                }
             }
 
+            // Initial load
             loadJSON(function(response) {
-                console.log("Populating content with JSON data", response);
                 populateContent(response);
             });
 
+            // Language selector change event
             document.getElementById('languageDropdown').addEventListener('change', function() {
                 var selectedLanguage = this.value;
-                console.log(`Language changed to: ${selectedLanguage}`);
                 loadJSON(function(response) {
                     populateContent(response);
                 }, selectedLanguage);
             });
 
-            AOS.init({
-                duration: 1200,
-                easing: 'ease-in-out-back',
-                once: true
-            });
+            AOS.init();
+        });
 
-             // Add mousemove event for interactive gradient background
-             document.addEventListener('mousemove', function(event) {
-                var x = event.clientX / window.innerWidth;
-                var y = event.clientY / window.innerHeight;
-                var gradientElement = document.getElementById('gradient');
-                gradientElement.style.background = `linear-gradient(${x * 360}deg, #ff7e5f, #feb47b, #ff7e5f)`;
-            });
+        document.addEventListener('mousemove', function(event) {
+            var gradient = document.getElementById('gradient');
+            var x = event.clientX / window.innerWidth;
+            var y = event.clientY / window.innerHeight;
+            gradient.style.background = `linear-gradient(${45 + x * 20}deg, #ff7e5f ${y * 100}%, #feb47b ${(1 - y) * 100}%)`;
         });
     </script>
 </body>
 </html>
+
